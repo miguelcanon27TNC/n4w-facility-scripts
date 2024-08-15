@@ -2,7 +2,7 @@
 
 ## Repository Overview
 
-Welcome to the `n4w-facility-codes` repository. This repository is designed to house all the scripts and codes used by the technical-scientific team at the Nature for Water (N4W) Facility. 
+Welcome to the `n4w-facility-scripts` repository. This repository is designed to house all the scripts and codes used by the technical-scientific team at the Nature for Water (N4W) Facility. 
 The repository is structured to organize scripts across different programming languages and domains, ensuring ease of collaboration, maintenance, and scalability.
 
 ## Repository Structure
@@ -50,8 +50,8 @@ This directory is for documentation related to the scripts, models, and data in 
 
 1. **Clone the Repository**: Start by cloning the repository to your local machine.
    ```bash
-   git clone https://github.com/your-username/n4w-facility-codes.git
-   cd n4w-facility-codes
+   git clone https://github.com/your-username/n4w-facility-scripts.git
+   cd n4w-facility-scripts
 
 2. **Explore the Directories**: Familiarize yourself with the directory structure and the purpose of each folder as outlined above.
 

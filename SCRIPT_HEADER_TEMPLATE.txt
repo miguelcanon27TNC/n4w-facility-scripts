@@ -1,0 +1,80 @@
+% -------------------------------------------------------------------------
+%              NATURE FOR WATER FACILITY - N4W (SCRIPTS AND CODES)
+% -------------------------------------------------------------------------
+%
+% Script Name  : <Script Name>
+%
+% Description  : <Brief description of the script's purpose and functionality. 
+%                 Include what the script does, how it is used, and any important 
+%                 details about its operation.>
+%
+% Language     : <Programming Language (e.g., Python, R, Matlab, Fortran, 
+%                 C++, Java)>
+%
+% Author:      : <Author's Name or Team>
+%
+%
+% Date:        : <Creation or Last Modification Date>
+%
+%
+% Dependencies : <List of libraries or modules required to run the script>
+%
+%
+% References   : <List of relevant references for consultation>
+%
+%
+% Notes:       : <Any other relevant information, such as warnings, assumptions, 
+%                 or additional instructions>
+%
+%--------------------------------------------------------------------------
+%                               INPUT DATA
+%--------------------------------------------------------------------------
+%
+%   <Variable>          <Var_Structure>   <Description>                                         <Units> 
+%
+%   Date                [t,1]           = Date                                                  [Datenum]
+%   P                   [t,Cat]         = Precipitation                                         [mm]
+%   ETP                 [t,Cat]         = Potential Evapotranspiration                          [mm]
+%   DemandSup           [t,Cat]         = Demand                                                [m^3]
+%   DemandSub           [t,Cat]         = Groundwater Demand                                    [m^3]
+%   Returns             [t,Cat]         = Returns                                               [m^3]
+%   BasinArea           [Cat,1]         = Basin Area                                            [m^2]
+%   FloodArea           [t,Cat]         = Floodplain Area                                       [m^2]
+%   ArcID               [t,Cat]         = ID of each section of the network                     [Ad]
+%   Arc_InitNode        [t,Cat]         = Initial node of each section of the network           [Ad]
+%   Arc_EndNode         [t,Cat]         = End node of each section of the network               [Ad]
+%   ArcID_Downstream    [t,Cat]         = ID of the end node of accumulation                    [Ad]
+%   a                   [Cat,1]         = Soil Retention Capacity                               [Ad]
+%   b                   [Cat,1]         = Maximum Capacity of Soil Storage                      [Ad]
+%   c                   [Cat,1]         = Flow Fraction Soil - Aquifer                          [Ad]
+%   d                   [Cat,1]         = Flow Fraction Aquifer - Soil                          [Ad]
+%   Tpr                 [CatFlood,1]    = Percentage return flow from floodplain to river       [Ad]
+%   Trp                 [CatFlood,1]    = Percentage lateral flow between river and floodplain  [Ad]
+%   Q_Umb               [CatFlood,1]    = Threshold lateral flow between river and floodplain   [mm]
+%   V_Umb               [CatFlood,1]    = Threshold return flow from floodplain to river        [mm]
+%   IDExtAgri           [Cat,1]         = ID of the HUA where to extraction Agricultural Demand [Ad]
+%   IDExtDom            [Cat,1]         = ID of the HUA where to extraction Domestic Demand     [Ad]
+%   IDExtLiv            [Cat,1]         = ID of the HUA where to extraction Livestock Demand    [Ad]
+%   IDExtMin            [Cat,1]         = ID of the HUA where to extraction Mining Demand       [Ad]
+%   IDExtHy             [Cat,1]         = ID of the HUA where to extraction Hydrocarbons Demand [Ad]
+%   IDRetDom            [Cat,1]         = ID of the HUA where to return Domestic Demand         [Ad]
+%   IDRetLiv            [Cat,1]         = ID of the HUA where to return Livestock Demand        [Ad]
+%   IDRetMin            [Cat,1]         = ID of the HUA where to return Mining Demand           [Ad]
+%   IDRetHy             [Cat,1]         = ID of the HUA where to return Hydrocarbons Demand     [Ad]
+%   ArcIDFlood          [CatFlood,1]    = ID basins with floodplain                             [Ad]
+%   ParamExtSup         [Cat,1]         = Percentage of Superficial Extraction                  [Ad]
+%   Sw                  [Cat,1]         = Soil Moinsture                                        [mm]
+%   Sg                  [Cat,1]         = Aquifer Storage                                       [mm]
+%   Vh                  [CatFlood,1]    = Volume of the floodplain Initial                      [mm]
+%   IDAq                [Cat,1]         = ID Aquifer                                            [Ad]
+%
+% -------------------------------------------------------------------------
+%                               OUTPUT DATA
+% -------------------------------------------------------------------------
+%
+%   <Variable>          <Var_Structure>   <Description>                                         <Units>
+%
+%   VAc                 [Cat,15,t]      = Cumulative variables
+%   ETR                 [t,Cat]         = Actual Evapotranspiration                 		[mm]
+%   StatesMT            [t,Cat,6]       = States Variable of the Thomas Model       		[mm]
+%   StatesMF            [t,Cat,3]       = States Variable of the Floodplains Model  		[mm]

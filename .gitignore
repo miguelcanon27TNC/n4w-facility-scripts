@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+*.pyo
+.env
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+.Ruserdata
+
+# MATLAB
+*.asv
+*.mex*
+*.mltbx
+*.mdlp
+*.mexa64
+*.mexmaci64
+*.mexw32
+*.mexw64
+
+# Fortran
+*.mod
+*.o
+*.obj
+*.exe
+*.out
+
+# C++
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.dylib
+*.so
+*.dll
+*.class
+*.swp
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+.idea/
+.classpath
+.project
+.settings/
+
+# Bash
+*.log
+*.tmp
+
+# Common Directories and Files
+.DS_Store
+*.log
+*.tmp
+*.swp

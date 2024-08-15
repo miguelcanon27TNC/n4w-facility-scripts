@@ -1,6 +1,6 @@
-# Contributing to n4w-facility-codes
+# Contributing to n4w-facility-scripts
 
-Thank you for considering contributing to the `n4w-facility-codes` repository! 
+Thank you for considering contributing to the `n4w-facility-scripts` repository! 
 Here are some guidelines to help you get started.
 
 ## Getting Started
@@ -11,14 +11,14 @@ If you're not a core team member, start by forking the repository to your own Gi
 ### 2. Clone Your Fork
 Clone the forked repository to your local machine:
 
-git clone https://github.com/your-username/n4w-facility-codes.git
-cd n4w-facility-codes
+git clone https://github.com/N4W-Facility/n4w-facility-scripts.git
+cd n4w-facility-scripts
 
 ### 3. Set Upstream Remote
 Set the upstream remote to the original repository to keep your fork up to date:
 
 ### 4. Create a New Branch
-Create a new branch for your work. It’s good practice to use a descriptive name:
+Create a new branch for your work. Itâ€™s good practice to use a descriptive name:
 
 git checkout -b feature-description
 

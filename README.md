@@ -50,7 +50,7 @@ This directory is for documentation related to the scripts, models, and data in 
 
 1. **Clone the Repository**: Start by cloning the repository to your local machine.
    ```bash
-   git clone https://github.com/your-username/n4w-facility-scripts.git
+   git clone https://github.com/N4W-Facility/n4w-facility-scripts.git
    cd n4w-facility-scripts
 
 2. **Explore the Directories**: Familiarize yourself with the directory structure and the purpose of each folder as outlined above.
